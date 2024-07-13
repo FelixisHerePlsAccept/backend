@@ -4,6 +4,7 @@ const cors = require('cors')
 const multer = require('multer')
 const fs = require('fs')
 const path = require('path')
+const port = process.env.PORT || 4000
 
 const app = express()
 app.use(cors())
@@ -219,6 +220,6 @@ app.delete('/delete', (req, res) => {
     })
 })
 
-app.listen(1000, () => {
-    console.log("Setting Backend at port 1000")
+app.listen(port, () => {
+    console.log(`Running in port ${port}`)
 })
